@@ -1,0 +1,23 @@
+.Footer{
+    background-color: var(--primaryBlack);
+    display: flex;
+    justify-content: center;
+    color: var(--primaryYellow);
+    padding: 10px;
+}
+
+.Footer h4{
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+.Footer img{
+    width: 30px;
+}
+
+.Footer a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
