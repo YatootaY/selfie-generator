@@ -4,7 +4,7 @@ import "./Term.css"
 const Term = () => {
     
     return(
-        <div className="Term">
+        <div className="Term" id="terms">
             <h2>Terms & Conditions</h2>
             <ul>
                 <li>This web application has been created solely as a personal project by Kaung Nay Lin Khant, and is not intended for profit.</li>

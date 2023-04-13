@@ -26,6 +26,10 @@
     color: var(--white);
 }
 
+.Header a:hover{
+    text-decoration: underline;
+}
+
 @media  screen and (max-width: 1000px) {
 
     .Header{

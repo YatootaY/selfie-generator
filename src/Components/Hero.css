@@ -79,3 +79,10 @@
 
 
 }
+
+.warning{
+    font-size: 1rem;
+    font-weight: 200;
+    color: var(--primaryYellow);
+    line-height: 3rem;
+}

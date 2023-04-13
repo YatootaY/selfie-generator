@@ -89,3 +89,9 @@ button:hover, label:hover{
     width: 20px;
     transform: rotate(180deg);
 }
+
+.controlContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -10,11 +10,11 @@ const Hero = () => {
             <div className="heroLeft">
                 <h2>How it works?</h2>
                 <p>
-                    Transform your photo into amazing selfie! <br/><br/>
-
                     1. Upload your photo<br/>
                     2. Wait a few second<br/>
-                    3. Get amazing selfie
+                    3. Get amazing selfie<br/>
+                    4. Download your selfie<br/>
+                    <span className="warning">All photos are deleted after broswer refresh</span>
                 </p>
             </div>
             <div className="heroRight">

@@ -74,7 +74,7 @@ const UploadSection = () => {
     },[selectedFile])
 
     return(
-        <div className="UploadSection">
+        <div className="UploadSection" id="transform">
             <h2>Transform your photo here!</h2>
             <div className="inputArea">
                 
@@ -99,14 +99,16 @@ const UploadSection = () => {
             
 
             {selectedFile && 
-                <div className="control">
-                    <button onClick={()=>{setZoom(zoom+4)}}>+</button>
-                    <button onClick={()=>{setZoom(zoom-4)}}>-</button>
+                <div className="controlContainer">
+                    <p>Adjust your character size before downloading</p>
+                    <div className="control">
+                        <button onClick={()=>{setZoom(zoom+4)}}>Zoom in</button>
+                        <button onClick={()=>{setZoom(zoom-4)}}>Zoom out</button>
+                    </div>
                 </div>
+                
             }
-            
-            
-            <p>We do not collect your photo.</p>
+        
         </div>
     )
 }
