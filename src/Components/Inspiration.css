@@ -1,0 +1,26 @@
+.Inspiration{
+    background-color: var(--primaryYellow);
+    padding: 100px 200px;
+}
+
+.Inspiration h2{
+    font-size: 2rem;
+}
+
+.Inspiration p{
+    font-size: 0.8rem;
+}
+
+.Inspiration img{
+    width: 100%;
+    border: 3px solid black;
+}
+
+@media  screen and (max-width: 800px) {
+
+    .Inspiration{
+        padding: 100px 50px;
+    }
+
+
+}
