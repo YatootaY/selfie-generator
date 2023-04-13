@@ -5,13 +5,14 @@ import front from "../assets/front.png"
 import logOut from "../assets/🦆 icon _log out_.png"
 import back from "../assets/back.png"
 import html2canvas from "html2canvas";
-
+import Loading from "./Loading";
 
 const UploadSection = () => {
 
     const [selectedFile, setSelectedFile] = useState();
     const [imageUrl, setImageUrl] = useState(null);
     const [zoom, setZoom] = useState(200)
+    const [loading,setLoading] = useState(false)
 
     const onFileChange = (e) => {
         setSelectedFile(e.target.files[0])
@@ -25,14 +26,16 @@ const UploadSection = () => {
 
     const handleDownload = () => {
         const element = document.getElementById("outputImg"); // replace with your div id
+        setLoading(true)
         html2canvas(element, {
-            scale: 25, // Set scale to 25x for full HD resolution (1920x1080)
+            scale: 4, 
             useCORS: true
         }).then(canvas => {
             const link = document.createElement("a");
-            link.download = "my-image.png";
+            link.download = "selfie generator.png";
             link.href = canvas.toDataURL();
             link.click();
+            setLoading(false)
         });
     }
 
@@ -74,10 +77,14 @@ const UploadSection = () => {
         <div className="UploadSection">
             <h2>Transform your photo here!</h2>
             <div className="inputArea">
-                {selectedFile ? 
-                    <button id="downloadBtn" onClick={handleDownload}><img src={logOut} alt="" className="downloadIcon"/> Download Image</button> : 
-                    <label htmlFor="imgInput" id="uploadBtn"><img src={logOut} alt="" className="icon"/> Upload Image </label>
+                
+                {
+                    loading ? <Loading/> : <> {selectedFile ? 
+                        <button id="downloadBtn" onClick={handleDownload}><img src={logOut} alt="" className="downloadIcon"/> Download Image</button> : 
+                        <label htmlFor="imgInput" id="uploadBtn"><img src={logOut} alt="" className="icon"/> Upload Image </label>
+                    }</>
                 }
+                
                 
                 <input type="file" onChange={onFileChange} accept="image/*" capture="camera" id="imgInput" style={{ display: 'none' }} />
             </div>
