@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/selfie-generator/static/css/main.e6d2f928.css",
-    "main.js": "/selfie-generator/static/js/main.2fd20c7f.js",
+    "main.js": "/selfie-generator/static/js/main.b95df84c.js",
     "static/media/barbieExample.png": "/selfie-generator/static/media/barbieExample.9346819d3d08b0facbec.png",
     "static/media/After.png": "/selfie-generator/static/media/After.44dca56dcd2d4912d815.png",
     "static/media/front.png": "/selfie-generator/static/media/front.3c52a7ae93f6f4c4e089.png",
@@ -11,10 +11,10 @@
     "static/media/loading.gif": "/selfie-generator/static/media/loading.803f24369a085e35482e.gif",
     "index.html": "/selfie-generator/index.html",
     "main.e6d2f928.css.map": "/selfie-generator/static/css/main.e6d2f928.css.map",
-    "main.2fd20c7f.js.map": "/selfie-generator/static/js/main.2fd20c7f.js.map"
+    "main.b95df84c.js.map": "/selfie-generator/static/js/main.b95df84c.js.map"
   },
   "entrypoints": [
     "static/css/main.e6d2f928.css",
-    "static/js/main.2fd20c7f.js"
+    "static/js/main.b95df84c.js"
   ]
 }
