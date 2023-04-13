@@ -15,7 +15,7 @@
     text-align: center;
 }
 
-.createImage img{
+#exampleImg{
     width: 300px;
     height: 300px;
     border: 3px solid black;
@@ -32,7 +32,7 @@
     gap:30px;
 }
 
-#uploadBtn, #openCamera{
+#uploadBtn{
     background-color: black;
     color: white;
     font-family: inherit;
@@ -51,4 +51,35 @@
 
 .icon{
     width: 20px;
+}
+
+.createImage{
+    position: relative;
+}
+
+.control{
+    display: flex;
+    gap:30px;
+}
+
+.control button{
+    background-color: black;
+    color: white;
+    font-family: inherit;
+    font-size: 0.8rem;
+    border: none;
+    width: 80px;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+button, label{
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+button:hover, label:hover{
+    transform: translateY(-0.2rem);
 }

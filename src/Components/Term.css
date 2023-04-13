@@ -17,6 +17,10 @@
     list-style: disc;
 }
 
+.Term ul{
+    color: rgb(101, 101, 101);
+}
+
 @media  screen and (max-width: 800px) {
 
     .Term{
