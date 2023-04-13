@@ -13,6 +13,8 @@ const UploadSection = () => {
     const [imageUrl, setImageUrl] = useState(null);
     const [zoom, setZoom] = useState(200)
     const [loading,setLoading] = useState(false)
+    const config = require('../config')
+    const apiKey = process.env.API_KEY || config.apiKey
 
     const onFileChange = (e) => {
         setSelectedFile(e.target.files[0])
@@ -21,7 +23,26 @@ const UploadSection = () => {
     const handleUpload = () => {
         const formData = new FormData();
         formData.append('image_file', selectedFile);
-        console.log(formData);
+        removeBackground(formData);
+    }
+
+    const removeBackground = async (formData) => {
+        try{
+            const response = await fetch("https://api.remove.bg/v1.0/removebg", {
+                method: "POST",
+                headers: {
+                    "x-api-key": apiKey
+                },
+                body: formData
+            });
+
+            const data = await response.blob();
+            setLoading(false)
+            setImageUrl(URL.createObjectURL(data));
+        }catch(error){
+            console.error(error)
+        }
+        
     }
 
     const handleDownload = () => {
@@ -61,7 +82,7 @@ const UploadSection = () => {
         return(
             <>
                 
-                <img src={URL.createObjectURL(selectedFile)} alt="" style={mainPic} id="pic1"/>
+                <img src={(imageUrl)} alt="" style={mainPic} id="pic1"/>
                 <img src={front} alt="" style={overlayImg} id="pic2"/>
                 <img src={back} alt="" style={stableImg} id="pic3"/>
             </>
