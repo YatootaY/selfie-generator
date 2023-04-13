@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/selfie-generator/static/css/main.b7a757f2.css",
+    "main.js": "/selfie-generator/static/js/main.58d527b9.js",
+    "static/media/barbieExample.png": "/selfie-generator/static/media/barbieExample.9346819d3d08b0facbec.png",
+    "static/media/After.png": "/selfie-generator/static/media/After.44dca56dcd2d4912d815.png",
+    "static/media/front.png": "/selfie-generator/static/media/front.3c52a7ae93f6f4c4e089.png",
+    "static/media/back.png": "/selfie-generator/static/media/back.4889eb018fe54f32609f.png",
+    "static/media/Example.png": "/selfie-generator/static/media/Example.20664fa1201a87ebf452.png",
+    "static/media/Before.png": "/selfie-generator/static/media/Before.7c0c150dfc94b8661498.png",
+    "static/media/loading.gif": "/selfie-generator/static/media/loading.803f24369a085e35482e.gif",
+    "index.html": "/selfie-generator/index.html",
+    "main.b7a757f2.css.map": "/selfie-generator/static/css/main.b7a757f2.css.map",
+    "main.58d527b9.js.map": "/selfie-generator/static/js/main.58d527b9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b7a757f2.css",
+    "static/js/main.58d527b9.js"
+  ]
+}
