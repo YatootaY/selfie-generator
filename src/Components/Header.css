@@ -4,8 +4,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 200px;
+    padding: 30px 200px;
     flex-wrap: wrap;
+    background-color: var(--primaryBlack);
 }
 
 .Header ul{
@@ -16,13 +17,16 @@
 .Header h1{
     font-family: var(--titleFont);
     font-size: 2rem;
+    color: var(--primaryYellow);
+    margin: 10px;
 }
 
 .Header a{
     font-size: 1rem;
+    color: var(--white);
 }
 
-@media  screen and (max-width: 800px) {
+@media  screen and (max-width: 900px) {
 
     .Header{
         justify-content: center;
@@ -33,7 +37,11 @@
 @media  screen and (max-width: 600px) {
 
     .Header{
-        padding: 0 50px;
+        padding: 30px 50px;
+    }
+
+    .Header h1{
+        margin-bottom: 15px;
     }
 
 }
