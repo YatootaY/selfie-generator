@@ -26,10 +26,11 @@
     color: var(--white);
 }
 
-@media  screen and (max-width: 900px) {
+@media  screen and (max-width: 1000px) {
 
     .Header{
         justify-content: center;
+        gap:20px;
     }
 
 }
