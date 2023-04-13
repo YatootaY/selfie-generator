@@ -31,7 +31,7 @@
     gap:30px;
 }
 
-#uploadBtn, #downloadBtn{
+#uploadBtn, #downloadBtn, #uploadBtn2{
     background-color: black;
     color: white;
     font-family: inherit;
@@ -94,4 +94,9 @@ button:hover, label:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#apiError{
+    color: rgb(208, 53, 53);
+    text-transform: uppercase;
 }

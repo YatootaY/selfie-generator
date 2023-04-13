@@ -6,6 +6,7 @@ import logOut from "../assets/🦆 icon _log out_.png"
 import back from "../assets/back.png"
 import html2canvas from "html2canvas";
 import Loading from "./Loading";
+import cameraIcon from "../assets/🦆 icon _camera outline_.png"
 
 const UploadSection = () => {
 
@@ -13,6 +14,7 @@ const UploadSection = () => {
     const [imageUrl, setImageUrl] = useState(null);
     const [zoom, setZoom] = useState(200)
     const [loading,setLoading] = useState(false)
+    const [apiError,setApiError] = useState(false)
     const config = require('../config')
     const apiKey = process.env.API_KEY || config.apiKey
 
@@ -27,6 +29,7 @@ const UploadSection = () => {
     }
 
     const removeBackground = async (formData) => {
+        setLoading(true)
         try{
             const response = await fetch("https://api.remove.bg/v1.0/removebg", {
                 method: "POST",
@@ -41,6 +44,7 @@ const UploadSection = () => {
             setImageUrl(URL.createObjectURL(data));
         }catch(error){
             console.error(error)
+            setApiError(true)
         }
         
     }
@@ -97,17 +101,25 @@ const UploadSection = () => {
     return(
         <div className="UploadSection" id="transform">
             <h2>Transform your photo here!</h2>
+            <h4 id="apiError">Sorry! Free tier API has expired</h4>
             <div className="inputArea">
                 
                 {
                     loading ? <Loading/> : <> {selectedFile ? 
                         <button id="downloadBtn" onClick={handleDownload}><img src={logOut} alt="" className="downloadIcon"/> Download Image</button> : 
-                        <label htmlFor="imgInput" id="uploadBtn"><img src={logOut} alt="" className="icon"/> Upload Image </label>
+                        
+                        <>
+                            <label htmlFor="imgInput" id="uploadBtn"><img src={cameraIcon} alt="" className="icon"/> Take Photo </label>
+                            <label htmlFor="imgUpload" id="uploadBtn2"><img src={logOut} alt="" className="icon"/> Upload Photo </label>
+                        </>
+                        
+                        
                     }</>
                 }
                 
                 
                 <input type="file" onChange={onFileChange} accept="image/*" capture="camera" id="imgInput" style={{ display: 'none' }} />
+                <input type="file"  accept="image/*" onChange={onFileChange} style={{ display: 'none' }} id="imgUpload"/>
             </div>
             
             <div style={{border:"3px solid black"}}>
