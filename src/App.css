@@ -7,3 +7,19 @@
   --titleFont:"Marck Script";
   --textFont:"Roboto";
 }
+
+body{
+  font-family: var(--textFont);
+}
+
+ul,ol{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  font-family: inherit;
+  color: inherit;
+}
