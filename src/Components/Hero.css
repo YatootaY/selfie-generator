@@ -48,7 +48,6 @@
 
     .Hero{
         flex-direction: column;
-        align-items: flex-start;
     }  
 
     .heroRight img:first-child{
@@ -71,6 +70,7 @@
     .Hero{
         align-items: center;
         padding: 25px;
+        padding-bottom: 100px;
     }
 
     .heroLeft h2{
