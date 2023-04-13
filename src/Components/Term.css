@@ -1,0 +1,27 @@
+.Term{
+    background-color: var(--primaryBlack);
+    color: var(--white);
+    padding: 100px 200px;
+}
+
+.Term h2{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.Term ul{
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    list-style: disc;
+}
+
+@media  screen and (max-width: 800px) {
+
+    .Term{
+        padding: 100px 50px;
+    }
+
+
+}
