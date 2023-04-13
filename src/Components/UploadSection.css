@@ -32,7 +32,7 @@
     gap:30px;
 }
 
-#uploadBtn{
+#uploadBtn, #downloadBtn{
     background-color: black;
     color: white;
     font-family: inherit;
@@ -55,6 +55,8 @@
 
 .createImage{
     position: relative;
+    width: 300px;
+    height: 300px;
 }
 
 .control{
@@ -82,4 +84,9 @@ button, label{
 
 button:hover, label:hover{
     transform: translateY(-0.2rem);
+}
+
+.downloadIcon{
+    width: 20px;
+    transform: rotate(180deg);
 }
